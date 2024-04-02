@@ -40,11 +40,31 @@ print('the total of the of the list is', total)
 
 # example for what is the avarage of the above list
 
-counts=0
-totals=0
+counts = 0
+totals = 0
 
 for number in numbers:
-    counts=counts+1
-    totals=totals+number
-avarge=total/counts
-print('the avarage of the above list is' , avarge)
+    counts = counts + 1
+    totals = totals + number
+average = total / counts
+print('the average of the above list is', average)
+
+# example 5 list out all numbers above 20
+
+for number in numbers:
+    if number > 20:
+        print('this number is grater than 20', number)
+# example 6 smallest number
+smallest = None
+
+for number in numbers:
+    if smallest is None:
+        smallest = number
+    elif number < smallest:
+        smallest = number
+
+print("the smallest number is", smallest)
+
+# is Operators
+# is operator that can used in logical expression it implies 'is the same as' similar to but strong than ==
+
