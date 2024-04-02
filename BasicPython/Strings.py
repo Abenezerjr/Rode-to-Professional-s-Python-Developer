@@ -39,7 +39,7 @@ print(a + b)
 print(a + "" + b)
 print(a + " " + b)
 
-# String default functio
+# String default function
 c = '  hello world  '
 d = c.upper()
 print(d)
@@ -52,4 +52,4 @@ print(c.rstrip())  # remove whitespace at the right
 print(c.strip())  # remove whitespace at the both
 
 well = 'pleas have a nice day'
-print(well.startswith('pleas')) # ask start the line of the string
+print(well.startswith('pleas')) # ask to start the line of the string
