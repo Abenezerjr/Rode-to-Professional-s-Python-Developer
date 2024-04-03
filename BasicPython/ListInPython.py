@@ -37,8 +37,49 @@ print(len(name))
 a = [1, 2, 3]
 b = [4, 5, 6]
 c = a + b  # + using concatenating
-print(a) #[1,2,3]
+print(a)  # [1,2,3]
 print(b)
 print(c)
-# list Methods
+# list Methods -----------------
+
+print(type(name))
+name.append('chebude')  # add in the list
+print(name)
+name.sort()
+print(name)
+name.pop()
+print(name)
+
+# build in function in a list
+numberss = [10, 5, 6, 8, 3, 5, 1]
+
+print(len(numberss))
+print(max(numberss))
+print(min(numberss))
+print(sum(numberss))
+print(sum(numberss) / len(numberss))
+
+# example one
+
+# numlist = []
+#
+# while True:
+#     inp = input('enter the number: ')
+#     if inp == 'done': break
+#     value = float(inp)
+#     numlist.append(value)
+# average = sum(numlist) / len(numlist)
+# print(f'the average of the number er you add {average}')
+
+# while True:
+#     inp=input('enter the number')
+#     if inp=='done':break
+#     value=float(inp)
+
+# about split()
+ListofName="abebe chala gemega"
+print(ListofName.split())
+listofage='12;35;65'
+print(listofage.split(';'))
+
 
