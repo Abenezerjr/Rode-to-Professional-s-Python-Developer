@@ -48,6 +48,10 @@ if height > 120:
             print(f'the total bill of {pay + 3}$')
         else:
             print(f'the total bill of {pay}$')
+    elif 45 <= age <= 55:
+        pay=0
+        print(f'you only pay {pay}$')
+
     else:
         pay = 12
         print(f'you only pay {pay}$')
