@@ -11,10 +11,4 @@
 #     else:
 #         addName = False
 # print(f"list of student name: {listOfName}")
-# # a=[1,2,3,4]
-# x=a.index(4)
-# print(x)
 
-x=['jon','don']
-m=x.index('don')
-print(m)
