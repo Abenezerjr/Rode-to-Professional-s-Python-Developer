@@ -13,7 +13,10 @@ programmingDictionary = {"Bug": "An error in a program that prevents the program
 # print()
 
 """what is dice: As you can see from the example, data is stored in key:value pairs in dictionaries, which makes it 
-easier to find values."""
+easier to find values.
+it is allow us to do fast database-like operation in python
+
+"""
 
 studentScore = {
     "joe": 100,
@@ -43,3 +46,62 @@ for key in studentScore:
         newDictionary[key] = 'Fail'
 
 print(newDictionary)
+
+name = dict()
+
+name["anenezer"] = 12
+name['chala'] = 15
+name['gemeda'] = 24
+print(name)
+name['anenezer'] = name['anenezer'] + 3  # using anenezer key add in to the varible of 12 and the expacting output is
+# 'qbenezer':15
+print(name)
+
+# Counting
+# count=dict()
+count = {}
+names = [
+    "a",
+    'b',
+    'c',
+    'a',
+    'c',
+]
+
+for name in names:
+    # if name not in count:
+    #     count[name] = 1
+    # else:
+    #     count[name] = count[name] + 1
+
+    count[name] = count.get(name, 0) + 1  # equale to the above if stetement
+    # we used the get() and provide a default value of 0 when the
+    # key is not yet in the dictionary-and then just add one
+print(count)
+
+# if name in count:
+#     x = count[name]
+#     print(x)
+# else:
+#     x = 0
+
+
+# get method for dictionaries
+"""the pattern of checking to see if a  key is already in the dictionary and assuming a default value if the key is 
+not there is so common thet there is method called get()"""
+# loop in dictionary
+studentMark = {
+    "joe": 100,
+    'jon': 87,
+    'arson': 54,
+    'berry': 86,
+    'simon': 67,
+}
+print(studentMark['joe'])
+print('===============')
+for key in studentMark:
+    print(key,studentMark[key])
+# Retrieving lists of keys and values
+print(list(studentMark)) # using a list, we can retrieve the kay
+print(studentMark.keys())
+print(studentMark.values())
