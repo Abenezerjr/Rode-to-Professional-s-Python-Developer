@@ -100,8 +100,17 @@ studentMark = {
 print(studentMark['joe'])
 print('===============')
 for key in studentMark:
-    print(key,studentMark[key])
+    print(key, studentMark[key])
 # Retrieving lists of keys and values
-print(list(studentMark)) # using a list, we can retrieve the kay
+print(list(studentMark))  # using a list, we can retrieve the kay
 print(studentMark.keys())
 print(studentMark.values())
+
+# Two iteration Variables
+"""
+we can loop through the key-value paris in a dictionary using 'two' iteration variable
+"""
+print('using two key')
+print(studentMark.items())
+for key, value in studentMark.items():
+    print(key, value)
