@@ -1,11 +1,12 @@
 import os
 
+
 def clear_screen():
     os.system('cls' if os.name == 'nt' else 'clear')
 
+
 auctionContinue = True
 auction = {}
-
 
 # def highestBidder(BiddingRecord):
 #     highestBid = 0
@@ -35,7 +36,7 @@ while auctionContinue:
             valueBid = auction[bid]
             if valueBid > highestBid:
                 highestBid = valueBid
-                winner=bid
+                winner = bid
         print(f'The winner is {winner} with a bid of ${highestBid}')
 
 print(auction)
