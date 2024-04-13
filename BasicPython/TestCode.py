@@ -1,5 +1,3 @@
-
-
 # addName = True
 # listOfName=[]
 # while addName:
@@ -34,8 +32,43 @@
 # print("Final auction dictionary:")
 # print(auction)
 
-monthDays = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
-print(monthDays)
-print(monthDays[1])
-monthDays[1]=29
-print(monthDays)
+# monthDays = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+# print(monthDays)
+# print(monthDays[1])
+# monthDays[1]=29
+# print(monthDays)
+
+def add(a1, a2):
+    return a1 + a2
+
+
+def sub(a1, a2):
+    return a1 + a2
+
+
+def mult(a1, a2):
+    return a1 + a2
+
+
+def div(a1, a2):
+    return a1 / a2
+
+
+operation = {
+    '+': add,
+    '-': sub,
+    '*': mult,
+    '/': div
+}
+
+num1 = int(input('enter the number: '))
+num2 = int(input('enter the secode number: '))
+
+for i in operation:
+    print(i)
+symbol = input('enter the symbol from the above: ')
+
+function = operation[symbol]
+result = function(num1, num2)
+
+print(f'{num1} {symbol} {num2} = {result}')
