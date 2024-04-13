@@ -13,23 +13,29 @@
 #     else:
 #         addName = False
 # print(f"list of student name: {listOfName}")
+#
+# auction_continue = True
+# auction = {}
+#
+# while auction_continue:
+#     name = input('Enter the name: ')
+#     bid = int(input('Enter the bid price: $'))
+#     auction[name] = bid  # Add the new user and bid to the auction dictionary
+#     print(auction)
+#
+#     another = input("Is there any other user? Say 'Yes' to continue or 'No' to quit: ").lower()
+#     if another == 'yes':
+#         auction_continue = True
+#     else:
+#         auction_continue=False
+#         for i in auction:
+#             print(auction[i])
+#
+# print("Final auction dictionary:")
+# print(auction)
 
-auction_continue = True
-auction = {}
-
-while auction_continue:
-    name = input('Enter the name: ')
-    bid = int(input('Enter the bid price: $'))
-    auction[name] = bid  # Add the new user and bid to the auction dictionary
-    print(auction)
-
-    another = input("Is there any other user? Say 'Yes' to continue or 'No' to quit: ").lower()
-    if another == 'yes':
-        auction_continue = True
-    else:
-        auction_continue=False
-        for i in auction:
-            print(auction[i])
-
-print("Final auction dictionary:")
-print(auction)
+monthDays = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+print(monthDays)
+print(monthDays[1])
+monthDays[1]=29
+print(monthDays)
