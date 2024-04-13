@@ -62,7 +62,7 @@ operation = {
 }
 
 num1 = int(input('enter the number: '))
-num2 = int(input('enter the secode number: '))
+num2 = int(input('enter the second number: '))
 
 for i in operation:
     print(i)
@@ -72,3 +72,9 @@ function = operation[symbol]
 result = function(num1, num2)
 
 print(f'{num1} {symbol} {num2} = {result}')
+
+symbol = input('enter the symbol from the above: ')
+num3 = int(input('enter the second number: '))
+function = operation[symbol]
+result2 = function(function(num1, num2), num3)
+print(f'{result} {symbol} {num3} = {result2}')
