@@ -1,5 +1,7 @@
 import os
 
+import replit
+
 
 def clear_screen():
     os.system('cls' if os.name == 'nt' else 'clear')
@@ -27,7 +29,7 @@ while auctionContinue:
     another = input("IS there  any other user? say 'Yes' to be continue or 'No to quit: ").lower()
     if another == 'yes':
         auctionContinue = True
-        clear_screen()
+        replit.clear()
     else:
         auctionContinue = False
         highestBid = 0

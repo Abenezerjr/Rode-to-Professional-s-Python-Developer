@@ -1,5 +1,7 @@
 import random
 
+import replit as replit
+
 
 #  Blackjack Game Rules
 
@@ -40,26 +42,65 @@ def calculateScore(cards):
 
     if 11 in cards and sum(cards) > 21:
         cards.remove(11)
-        cards.add(1)
+        cards.append(1)
     return sum(cards)
 
 
-userCards = []
-computerCards = []
-isGameOver=False
+def compare(userScore, computerScore):
+    if userScore == computerScore:
+        return "Draw"
+    elif computerScore == 0:
+        return " lost the opponent has blackjack"
+    elif userScore == 0:
+        return "win with a blackjack"
+    elif userScore > 21:
+        return " you went over. you lost"
+    elif computerScore > 21:
+        return "opponent went over .you win"
+    elif userScore > computerScore:
+        return "you win"
+    else:
+        return "you lost"
 
-for _ in range(2):  # run this loop two times
 
-    userCards.append(dealCard())
-    computerCards.append(dealCard())
+def BlackJack():
+    userCards = []
+    computerCards = []
+    isGameOver = False
 
-print(userCards)
-print(computerCards)
+    for _ in range(2):  # run this loop two times
 
-userScore = calculateScore(userCards)
-computerScore = calculateScore(computerCards)
-print(userScore)
-print(computerScore)
+        userCards.append(dealCard())
+        computerCards.append(dealCard())
 
-if userScore == 0 or computerScore==0 or userCards > 21:
-    isGameOver=True
+    print(userCards)
+    print(computerCards)
+
+    while not isGameOver:
+        userScore = calculateScore(userCards)
+        computerScore = calculateScore(computerCards)
+        print(f"Your cards:{userCards},current score: {userScore}")
+        print(f"Computer cards:{computerCards[0]}")
+
+        if userScore == 0 or computerScore == 0 or userScore > 21:
+            isGameOver = True
+        else:
+            userShouldDeal = input("Type 'y' to get another card, type 'n' to pass: ")
+            if userShouldDeal == 'y':
+                userCards.append(dealCard())
+            else:
+                isGameOver = True
+
+    while computerScore != 0 and computerScore < 17:
+        computerCards.append((dealCard()))
+        computerScore = calculateScore(computerCards)
+
+    print(f"your final hand is {userCards}, final score: {userScore}")
+    print(f"computer  final hand is {computerCards}, final score: {computerScore}")
+
+    print(compare(userScore, computerScore))
+
+
+while input(" do you went to play a game of Blackjack? type 'y' or 'n': '") == "y":
+    replit.clear()
+    BlackJack()
