@@ -24,14 +24,14 @@ for n in range(0, nr_symbols):
     rSymbol = random.choice(symbols)
 
     eSymbol = eSymbol + rSymbol
-# print(f'the symbol of you choose: {eSymbol}')
+# print(fetch symbol of you choose: {eSymbol}')
 
 eNumbers = ''
 for q in range(0, nr_numbers):
     rNumbers = random.choice(numbers)
 
     eNumbers = eNumbers + rNumbers
-# print(f'the symbol of you choose: {eNumbers}')
+# print(fetch symbol of you choose: {eNumbers}')
 
 finalPassword = eLetter + eSymbol + eNumbers
 result = list(finalPassword)
