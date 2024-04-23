@@ -1,3 +1,5 @@
+import re
+
 """
 Regular Expressions
 
@@ -6,3 +8,7 @@ for matching strings of text, such as particular characters, words, or patterns 
 is written in a formal language that can be interpreted by a regular expression processor
 
 """
+
+text = 'The rain in Spain'
+x = re.search("^The.*Spain$", text)
+print(x)

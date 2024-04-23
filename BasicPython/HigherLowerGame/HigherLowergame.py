@@ -1,11 +1,15 @@
 import random
 from game_data import data
-
+import art
 
 # Start HigherLowerGame
 
 
 def formateData(account):
+    """
+    the function take account in the data list
+    :return string of an account
+    """
     accountName = account['name']
     accountDescription = account['description']
     accountCountry = account['country']
@@ -21,17 +25,17 @@ def checkAnswer(guess, aFollowers, bFollowers):
 
 score = 0
 gameContinue = True
-accountB = random.choice(data)
+accountB = random.choice(data)  # choose random ig data and save in the accountB
 
 while gameContinue:
-    accountA = accountB
-    accountB = random.choice(data)
+    accountA = accountB  # the user right saves the data be in the data a
+    accountB = random.choice(data)  # another data and save in data b
 
     while accountA == accountB:
-        accountB = random.choice(data)
+        accountB = random.choice(data)  # if there is equal change data b
 
     print(f'compare A:{formateData(accountA)}')
-    print("Vs")
+    print(art.vs)
     print(f'Against B:{formateData(accountB)}')
 
     guss = input("who has more followers? Type 'A' or 'B'.").lower()
