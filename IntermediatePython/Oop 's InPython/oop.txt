@@ -90,5 +90,33 @@ def take_payment(amount):
      #add money to a restaurant
 
 
+##################
+Class: A class is a blueprint or template for creating objects. It defines a set of attributes and methods that the created objects will have.
+Object: An object is an instance of a class. When a class is defined, no memory is allocated until an object is created from the class, also known as instantiation.
+Attribute: An attribute is a characteristic of an object that holds data. In Python, for example, if an object o has an attribute a, it would be accessed as o.a.
+Method: A method is a function that is associated with an object. In Python, all methods are functions, but not all functions are methods. Methods perform actions using the object’s attributes or change the object’s state.
+Here’s a simple Python example to illustrate these concepts:
 
+Python
+
+class NAS:
+    # This is a class attribute
+    storage_capacity = '10TB'
+
+    def __init__(self, location):
+        # This is an instance attribute
+        self.location = location
+
+    # This is a method
+    def report_status(self):
+        return f"NAS located at {self.location} with storage: {self.storage_capacity}"
+
+# Creating an object of the NAS class
+my_nas = NAS('Data Center 1')
+
+# Accessing the object's attribute
+print(my_nas.location)  # Output: Data Center 1
+
+# Calling the object's method
+print(my_nas.report_status())  # Output: NAS located at Data Center 1 with storage: 10TB
 
