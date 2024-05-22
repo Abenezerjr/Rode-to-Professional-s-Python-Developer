@@ -3,7 +3,7 @@ import pandas
 data = pandas.read_csv("nato_phonetic_alphabet.csv")
 # print(data.to_dict())
 
-phonetic_dict = {row.letter: row.code for (index, row) in data.iterrows()}
+phonetic_dict = {row.letter: row.code for (index, row) in data.iterrows()} # competition
 
 word = input("Enter a word: ").upper()
 out_put = [phonetic_dict[letter] for letter in word]
